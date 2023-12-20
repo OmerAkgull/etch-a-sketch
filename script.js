@@ -7,12 +7,10 @@ for (let i = 0; i < 256; i++) {
 
 const grids = document.querySelectorAll(".grid");
 
-function hoverEffect() {
-  for (grid of grids) {
-    grid.style.background = "gray";
-  }
+function hoverEffect(event) {
+  event.target.style.background = "black";
 }
 
-for (grid of grids) {
-  grid.addEventListener("mouseover", hoverEffect);
+for (box of grids) {
+  box.addEventListener("mouseover", hoverEffect);
 }
