@@ -16,9 +16,7 @@ function hoverEffect(event) {
 }
 
 const changeSquareNumber = () => {
-  for (box of grids) {
-    box.remove();
-  }
+  container.innerHTML = "";
   let squareNumber = prompt(
     "Please enter the number of squares per side, maximum of 100."
   );
