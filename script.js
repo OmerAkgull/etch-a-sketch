@@ -9,17 +9,13 @@ function createGrids() {
     const div = document.createElement("div");
     div.classList.add("grid");
     container.appendChild(div);
+    div.addEventListener("mouseover", hoverEffect)
   }
 }
 
 createGrids();
 
-const grids = document.querySelectorAll(".grid");
-
-function hoverEffect(event) {
-  event.target.style.background = "black";
-}
-
+//resize grid
 const changeSquareNumber = () => {
   container.innerHTML = "";
   let squareNumber = prompt(
@@ -33,6 +29,7 @@ const changeSquareNumber = () => {
       div2.style.height = `${boxSize}px`;
       div2.style.width = `${boxSize}px`;
       container.appendChild(div2);
+      div2.addEventListener("mouseover", hoverEffect)
     }
   } else {
     changeSquareNumber();
@@ -41,8 +38,12 @@ const changeSquareNumber = () => {
 
 gridButton.addEventListener("click", changeSquareNumber);
 
-for (box of grids) {
-  box.addEventListener("mouseover", hoverEffect);
+
+//hover effect
+
+
+function hoverEffect(event) {
+  event.target.style.background = "black";
 }
 
 //reset functionality
