@@ -10,7 +10,10 @@ function createGrids() {
     const div = document.createElement("div");
     div.classList.add("grid");
     container.appendChild(div);
-    div.addEventListener("mouseover", hoverEffect)
+    div.addEventListener("mouseover", hoverEffect);
+    rgbButton.addEventListener("click", () => {
+      div.addEventListener("mouseover", rgbEffect);
+    });
   }
 }
 
@@ -30,7 +33,10 @@ const changeSquareNumber = () => {
       div2.style.height = `${boxSize}px`;
       div2.style.width = `${boxSize}px`;
       container.appendChild(div2);
-      div2.addEventListener("mouseover", hoverEffect)
+      div2.addEventListener("mouseover", hoverEffect);
+      rgbButton.addEventListener("click", () => {
+        div2.addEventListener("mouseover", rgbEffect);
+      });
     }
   } else {
     changeSquareNumber();
@@ -39,9 +45,7 @@ const changeSquareNumber = () => {
 
 gridButton.addEventListener("click", changeSquareNumber);
 
-
 //hover effect
-
 
 function hoverEffect(event) {
   event.target.style.background = `black`;
@@ -55,7 +59,11 @@ resetBtn.addEventListener("click", createGrids);
 function getRandomColor() {
   var num = Math.round(0xffffff * Math.random());
   var r = num >> 16;
-  var g = num >> 8 & 255;
+  var g = (num >> 8) & 255;
   var b = num & 255;
-  return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  return "rgb(" + r + ", " + g + ", " + b + ")";
+}
+
+function rgbEffect(event) {
+  event.target.style.background = `${getRandomColor()}`;
 }
