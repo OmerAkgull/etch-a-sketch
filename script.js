@@ -1,6 +1,7 @@
 //global variables
 const container = document.querySelector(".container");
 const gridButton = document.querySelector("#gridBtn");
+const rgbButton = document.querySelector("#rgbBtn");
 
 //create grids
 function createGrids() {
