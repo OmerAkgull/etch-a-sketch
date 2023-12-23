@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    font-family: "Press Start 2P";
+}
+
+body {
+    padding-top: 2rem;
+    background-color: rgb(248, 243, 243) !important;
 }
 
 .container {
@@ -18,20 +24,13 @@
 
 h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     gap: 20px;
-}
-
-#gridBtn,
-#resetBtn,
-#rgbBtn {
-    padding: 1rem 1rem;
-    font-size: 1.3rem;
 }
