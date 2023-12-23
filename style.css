@@ -13,7 +13,7 @@
 .grid {
     width: 30px;
     height: 30px;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
 }
 
 h1 {
@@ -30,7 +30,8 @@ h1 {
 }
 
 #gridBtn,
-#resetBtn {
+#resetBtn,
+#rgbBtn {
     padding: 1rem 1rem;
     font-size: 1.3rem;
 }
